@@ -1,0 +1,7 @@
+
+public class AddressMain {
+
+	static Scanner input = new Scanner(System.in);
+	static List<String> book = new ArrayList<>();
+	
+}

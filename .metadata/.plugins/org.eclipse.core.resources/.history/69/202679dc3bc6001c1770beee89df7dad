@@ -1,0 +1,36 @@
+package AddressBook;
+import java.util.Scanner;
+
+public class AddressMain {
+
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+	AddressBook newBook = new AddressBook();
+	String option = input.nextLine();
+	
+	do {
+		System.out.println("Please select an action: \n1. Add an entry \n2. Remove an entry \n3. Search for an entry \n4. Print address book \n5. Delete address book \n6. Quit program");
+		
+		if (option.equals("1")) {
+			AddressEntry entry = AddressEntry.addressFromInput(input);
+			newBook.addEntry(entry);
+			}
+		} else if (option.equals("2")) {
+			System.out.println("What is the email address of the entry to remove?");
+			String remove = input.nextLine();
+			newBook.removeEntry(remove);
+		} else if (option.equals("3")) {
+			System.out.println("Please chooise what to search by: ");
+			String choice = input.nextLine();
+			
+			
+		}
+	
+	while (!option.equals("6"));
+	
+
+	}
+	
+	
+	
+}
